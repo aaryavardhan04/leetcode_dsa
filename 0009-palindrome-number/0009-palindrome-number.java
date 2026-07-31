@@ -7,7 +7,7 @@ class Solution {
             temp= copy%10;
             copy /= 10;
             num = num*10 + temp;
-            System.out.println(num);
+            // System.out.println(num);
         }
         if(x==num){
             return true;
