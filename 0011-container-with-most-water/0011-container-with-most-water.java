@@ -4,9 +4,6 @@ class Solution {
         
         int left = 0;
         int right = height.length-1;
-
-        int breadth = height.length-1;
-        // int height = height[0];
         int max_vol = 0;
 
 
@@ -23,7 +20,6 @@ class Solution {
                 }
                 left++;
             }
-            breadth--;
         }
         return max_vol;
 
