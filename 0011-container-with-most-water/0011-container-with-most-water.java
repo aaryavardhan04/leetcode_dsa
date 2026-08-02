@@ -14,7 +14,7 @@ class Solution {
                 }
                 right--;    
             }
-            else if(height[left]<=height[right]){
+            else {
                 if(max_vol< (right-left)*height[left]){
                     max_vol= (right-left)*height[left];
                 }
