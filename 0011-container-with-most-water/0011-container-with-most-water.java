@@ -21,6 +21,7 @@ class Solution {
                 left++;
             }
         }
+        System.gc();
         return max_vol;
 
     }
