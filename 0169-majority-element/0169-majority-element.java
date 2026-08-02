@@ -1,6 +1,9 @@
 class Solution {
     public int majorityElement(int[] nums) {
 
+
+        // M1 - SORT ARRAY MANUALLY - INSERTION SORT 
+
         // int temp=0;
         // for (int j=0; j<nums.length;j++){
         //     temp=nums[j];
@@ -13,11 +16,16 @@ class Solution {
         // }
         // return nums[nums.length/2];
 
-        Arrays.sort(nums);
-        return nums[nums.length / 2];
+
+        //M2 - SORT ARRAY USING LIBRARY 
+
+
+        // Arrays.sort(nums);
+        // return nums[nums.length / 2];
 
 
 
+        //M3 - BRUTE FORCE FOR COUNTING - TLE IN HIDDEN TEST CASE (MY LOGIC EXPCETED SHIT)
 
         // for(int i =0 ; i <nums.length;i++){
         //     int x=0;
@@ -32,5 +40,24 @@ class Solution {
         //     }
         // }
         // return nums[1];
+
+        //M4 - GPT GURUDEV - Boyer-Moore Voting Algorithm
+
+        int candidate = 0;
+        int count = 0;
+
+        for(int i =0 ; i < nums.length; i++){
+            if(count==0){
+                candidate=nums[i];
+                count=1;
+            }
+            else if (nums[i]!=candidate){
+                count--;
+            }
+            else{
+                count++;
+            }
+        }
+        return candidate;
     }
 }
