@@ -13,10 +13,9 @@ class Solution {
 
         for (int i =1; i < nums.length; i++){
             if(nums[i-1] + 1!= nums[i]){
-            int range = nums[i]-nums[i-1];
-            int copy = nums[i-1];
-            for (int j=0; j <range-1;j++){
-                miss.add(copy+1);
+            int copy = nums[i-1]+1 ;
+            while(copy <nums[i]){
+                miss.add(copy);
                 copy++;
             }
             }
